@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
+
     <groupId>br.com.ingenieux.towel</groupId>
     <artifactId>towel</artifactId>
     <version>1.2.3-SNAPSHOT</version>
@@ -10,6 +11,7 @@
     <url>https://github.com/MarkyVasconcelos/Towel</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <versions.java-security-toolkit>1.0.6</versions.java-security-toolkit>
     </properties>
     <dependencies>
         <dependency>
@@ -17,5 +19,18 @@
             <artifactId>swing-layout</artifactId>
             <version>1.0.3</version>
         </dependency>
+        <dependency>
+            <groupId>io.github.pixee</groupId>
+            <artifactId>java-security-toolkit</artifactId>
+        </dependency>
     </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.pixee</groupId>
+                <artifactId>java-security-toolkit</artifactId>
+                <version>${versions.java-security-toolkit}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
