@@ -245,6 +245,7 @@ public class HeaderPopup extends JPopupMenu
         Dimension d = null;
         if (rect.getWidth() < 180)
         {
+            {
             d = new Dimension(180, (int) list.getPreferredSize().getHeight());
 
             if ((int) (rect.getX() - 1) - (180 - rect.getWidth()) > 0)
@@ -256,6 +257,7 @@ public class HeaderPopup extends JPopupMenu
                 rect.setBounds(0, (int) rect.getY(), (int) rect.getWidth(),
                         (int) rect.getHeight());
 
+        }
         }
         else
             d = new Dimension((int) rect.getWidth() - 1,
