@@ -46,7 +46,7 @@ public class AnnotationResolver {
 					colName = fieldN.substring(index + 1);
 					fieldN = fieldN.substring(0, index);
 				}
-				if (fieldN.equals("blank")) {
+				if ("blank".equals(fieldN)) {
 					resolvers[i] = new FieldResolver(clazz, "", colName,
 							new BlankHandler());
 					continue;

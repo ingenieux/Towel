@@ -209,7 +209,7 @@ public class NamedBinder implements Binder {
 		public String getDefaultValue(String current) {
 			if (current == null || current.isEmpty())
 				return defaultValue;
-			if (condition.equals("=")) {
+			if ("=".equals(condition)) {
 				if (current.equals(conditionParam))
 					return defaultValue;
 			}
