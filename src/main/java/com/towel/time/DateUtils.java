@@ -121,7 +121,7 @@ public class DateUtils {
 	 */
 	public final static String textToMMDDYYYY(String pdata) {
 		String aux = "";
-		if (!pdata.equals("__/__/____") && !pdata.equals(""))
+		if (!"__/__/____".equals(pdata) && !"".equals(pdata))
 			aux = pdata.substring(3, 5) + "/" + pdata.substring(0, 2) + "/"
 					+ pdata.substring(6);
 		return aux;
