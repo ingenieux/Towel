@@ -1,5 +1,6 @@
 package sandbox.installer.steps;
 
+import io.github.pixee.security.ZipSecurity;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -28,7 +29,7 @@ public class ExtractZipStep implements Step {
 	@Override
 	public void doStep() {
 		try {
-			ZipInputStream in = new ZipInputStream(new FileInputStream(
+			ZipInputStream in = ZipSecurity.createHardenedInputStream(new FileInputStream(
 					new File(zipFile)));
 			for (ZipEntry entry = null; in.available() == 1; entry = in
 					.getNextEntry()) {
